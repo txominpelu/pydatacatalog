@@ -1,0 +1,16 @@
+MANIFEST.in
+README.rst
+distribute_setup.py
+setup.py
+./pydatacatalog/__init__.py
+./pydatacatalog/datacatalog.py
+./pydatacatalog/test/__init__.py
+./pydatacatalog/test/datacatalog_test.py
+pydatacatalog/__init__.py
+pydatacatalog/datacatalog.py
+pydatacatalog.egg-info/PKG-INFO
+pydatacatalog.egg-info/SOURCES.txt
+pydatacatalog.egg-info/dependency_links.txt
+pydatacatalog.egg-info/namespace_packages.txt
+pydatacatalog.egg-info/not-zip-safe
+pydatacatalog.egg-info/top_level.txt

@@ -1,0 +1,5 @@
+
+distribute*.tar.gz
+distribute*.egg
+build
+*.pyc
