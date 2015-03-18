@@ -3,3 +3,5 @@ distribute*.tar.gz
 distribute*.egg
 build
 *.pyc
+python-pydatacatalog*.deb
+pydatacatalog.egg-info
