@@ -50,12 +50,12 @@ class DatacatalogDefaults(object):
       raise DataCatalogError("Error accessing url : {0}. {1}".format(url, e.reason))
 
   def _available(self, symbols):
-    resp = requests.get(url(self.host, symbols))
+    resp = requests.get(self._url(symbols))
     return resp.status_code == 200
 
 
   def _unavailable(self, symbols):
-    resp = requests.get(self.url(self.host, symbols))
+    resp = requests.get(self._url(symbols))
     if resp.status_code == 404 :
       return json.loads(resp.content)
     else:
@@ -67,7 +67,7 @@ class DatacatalogDefaults(object):
     return url
 
   def _today(self):
-    return datetime.date.today().strftime("%Y-%m-%d")
+    return date.today().strftime("%Y-%m-%d")
 
   def wait(self, symbols, deadline, waiting_time=600, deadline_passed = deadline_passed):
     def valid (tries):

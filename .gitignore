@@ -6,3 +6,5 @@ build
 python-pydatacatalog*.deb
 pydatacatalog.egg-info
 *.*.swp
+target
+*~
