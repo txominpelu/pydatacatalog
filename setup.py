@@ -39,6 +39,10 @@ setup(
     package_dir = {'': "."},   # tell distutils packages are under src
     install_requires=[
         # -*- Requirements -*-
+        "argparse",
+        "pytz",
+        "requests",
+        "wsgiref"
     ],
     entry_points = {
         # -*- Entry points -*-
