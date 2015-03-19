@@ -1,3 +1,13 @@
+
+====
+CLI: Get path for a symbol
+====
+
+
+.. code-block:: bash
+
+   python -m pydatacatalog.datacatalog --host datacatalog01.preprod.sf.viadeo.internal data.unsubscribe.201501
+
 ====
 How to build the .deb package
 ====

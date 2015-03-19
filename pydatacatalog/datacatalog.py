@@ -95,4 +95,5 @@ def parse_args(args_conf):
 
 if __name__ == '__main__':
   args = parse_args(args_conf)
-  print latest(args.symbol, args.host)
+  datacat = DatacatalogDefaults(args.host)
+  print datacat.latest(args.symbol)
