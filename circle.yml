@@ -8,13 +8,14 @@ dependencies:
     - ~/.local  # cache pip programs 
   pre:
     # setup shared scripts
-    - if [[ ! -d ~/.viadeo ]]; then git clone git@github.com:viadeo/viadeo-docker.git ~/.viadeo; fi  
     # provision required dependency for s3 upload
-    - ~/.viadeo/bin/s3-provision.sh 
 
   override:
     - docker info
     - docker build -t imediavilla/debian-squeeze-py2.6 .
+    - pip install s3peat
+    - pip uninstall -y boto
+    - pip install -U gsutil
 
 test:
   override:
@@ -24,4 +25,4 @@ deployment:
   hub:
     branch: master
     commands:
-      - docker run -i -v $PWD:/mnt -t imediavilla/debian-squeeze-py2.6 /mnt/build_all.sh && ~/.viadeo/bin/s3-publish.sh ./target
+      - docker run -i -v $PWD:/mnt -t imediavilla/debian-squeeze-py2.6 /mnt/build_all.sh && s3peat -b viadeo-build-artifacts ./target
