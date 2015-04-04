@@ -3,7 +3,7 @@ FROM debian:squeeze
 
 MAINTAINER Inigo Mediavilla <imediavilla@viadeoteam.com>
 
-RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get -y install python python-setuptools ruby-dev gcc rubygems
+RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get -y install python python-setuptools ruby-dev gcc rubygems dh-virtualenv debhelper
 
 RUN gem install fpm
 

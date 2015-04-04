@@ -8,3 +8,4 @@ pydatacatalog.egg-info
 *.*.swp
 target
 *~
+debian/pydatacatalog*
